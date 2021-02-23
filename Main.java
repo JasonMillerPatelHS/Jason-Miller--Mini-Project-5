@@ -3,7 +3,7 @@ class Main {
   public static void main(String[] args) 
   {
     Scanner scan = new Scanner(System.in); //declaring Scanner scan
-    System.out.println("What is your budget for spending?");
+    System.out.println("Welcome to Jason's Marcket! This program is a price calculator! \nWhat is your budget for spending?");
     double budget = scan.nextDouble(); //uses scanner scan
     budget = money(budget); //calls to method, makes budget = to method
     System.out.println(budget); //prints final budget
@@ -42,7 +42,7 @@ class Main {
       String response = scan.next(); //scans user response again
       if (response.equals("y")) //if user typed y then..
         {
-          System.out.println("Okay, thank you for shopping! \nIf you made a mistake along the way restart the program! \nfinal balance ($): ");
+          System.out.println("Okay, thank you for shopping with Jason! \nIf you made a mistake along the way restart the program! \nfinal balance ($): ");
           return newCash;
         } 
       else if (response.equals("n")) //if user typed n...
