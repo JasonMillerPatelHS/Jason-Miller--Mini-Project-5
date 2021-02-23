@@ -5,9 +5,9 @@ class Main {
     Scanner scan = new Scanner(System.in); //declaring Scanner scan
     System.out.println("What is your budget for spending?");
     double budget = scan.nextDouble(); //uses scanner scan
-    budget = money(budget); //calls to method
-    System.out.println(budget);
-    scan.close();
+    budget = money(budget); //calls to method, makes budget = to method
+    System.out.println(budget); //prints final budget
+    scan.close(); //ends scanner in main
   } 
 
   public static double money(double cash) //Method
@@ -21,9 +21,9 @@ class Main {
     {
       System.out.println("You don't have enough money; \n would you like to try to input a cheaper item? (y/n)");
 
-      String response = scan.next();
+      String response = scan.next(); //scans for response next line,
 
-      if(response.equals("y"))
+      if(response.equals("y")) //if user input y
       {
         money(cash);
       } 
@@ -36,16 +36,16 @@ class Main {
     else if (cash > price && price >= 0)
     {
       double newCash = cash - price; 
-      purchase++;
+      purchase++; //adds one to purchases to show how many items user bought
       System.out.println("Purcahses: " + purchase + ", results in your balance being: $" + newCash);
       System.out.println("Will that be your FINAL purchase? (y/n)");
-      String response = scan.next();
-      if (response.equals("y"))
+      String response = scan.next(); //scans user response again
+      if (response.equals("y")) //if user typed y then..
         {
           System.out.println("Okay, thank you for shopping! \nIf you made a mistake along the way restart the program! \nfinal balance ($): ");
           return newCash;
         } 
-      else if (response.equals("n"))
+      else if (response.equals("n")) //if user typed n...
       {
         System.out.println("Okay moving onto next item...");
         money(newCash); //creates a loop restarts method
@@ -54,9 +54,9 @@ class Main {
       {
         return newCash;
       }
-      scan.close();
+      scan.close(); //ends scanner
     } 
-    scan.close();
+    scan.close(); //ends scanner in method
     return cash;
   } 
 } 
