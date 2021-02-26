@@ -57,7 +57,7 @@ class Main {
         {
           System.out.println("Okay, thank you for shopping with Jason! \nIf you made a mistake along the way restart the program! \nCash left over($): ");
           scan.close(); //ends scanner
-          return newCash;
+          return newCash; //sends back to main
         } 
       else if (response.equals("n")) //if user typed n...
       {
@@ -67,7 +67,7 @@ class Main {
       else
       {
         scan.close(); //ends scanner
-        return newCash;
+        return newCash; //sends back to main
       }
       scan.close(); //ends scanner
       return newCash;
